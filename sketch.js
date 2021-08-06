@@ -15,7 +15,7 @@ function setup() {
   world = engine.world
   blower = new Blower(350,200,100,100);
   blowerMouth = new  BlowerMouth(250,240,100,20)
-  ball = new Ball(100,240,50,50)
+  ball = new Ball(330,100,50,50)
   button = createButton("click to blow")
   button.mousePressed(blow)
   button.class("blowButton")
@@ -32,5 +32,5 @@ function draw() {
 }
 function blow(){
 Matter.Body.applyForce(ball.body, {x:0,y:0},{x:0,y:0.05});
-Matter.Body.setStatic(ball.body, false);
+
 }
